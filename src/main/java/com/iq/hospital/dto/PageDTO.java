@@ -1,11 +1,9 @@
-package com.iq.hospital.model;
+package com.iq.hospital.dto;
 
-import javax.persistence.Embeddable;
-
-@Embeddable
-public class Page {
+public class PageDTO {
     private int page;
     private int limit;
+    private QueryDTO queryDTO;
 
     public int getPage() {
         return page;
@@ -21,5 +19,13 @@ public class Page {
 
     public void setLimit(int limit) {
         this.limit = limit;
+    }
+
+    public QueryDTO getQueryDTO() {
+        return queryDTO;
+    }
+
+    public void setQueryDTO(QueryDTO queryDTO) {
+        this.queryDTO = queryDTO;
     }
 }
